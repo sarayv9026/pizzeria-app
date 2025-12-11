@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/v1': {
-        target: process.env.VITE_API_URL || 'http://127.0.0.1:3000',
+        target: process.env.VITE_API_URL || 'https://pizzeria-app-1-n5m6.onrender.com',
         changeOrigin: true
       }
     }
