@@ -1,0 +1,12 @@
+# Backend Dockerfile
+FROM node:18-alpine AS base
+WORKDIR /app
+COPY backend/package*.json ./
+RUN npm install --only=production
+COPY backend/. .
+
+ENV HOST=0.0.0.0 \
+    PORT=3000
+EXPOSE 3000
+
+CMD ["node", "src/server.js"]
