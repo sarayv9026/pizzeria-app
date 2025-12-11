@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: pizzeria-backend
+    runtime: docker
+    plan: starter
+    branch: carlos-caste-proyect
+    rootDir: .
+    dockerfilePath: Dockerfile.backend
+    autoDeploy: true
+    healthCheckPath: /v1/health
+    envVars:
+      - key: PORT
+        value: "3000"
+      - key: HOST
+        value: 0.0.0.0
+      - key: MONGODB_URI
+        sync: false  # define este secreto en el dashboard de Render
+  - type: web
+    name: pizzeria-frontend
+    runtime: docker
+    plan: starter
+    branch: carlos-caste-proyect
+    rootDir: .
+    dockerfilePath: Dockerfile.frontend
+    autoDeploy: true
+    envVars:
+      - key: DOCKER_BUILD_ARGS
+        value: VITE_API_URL=https://pizzeria-backend.onrender.com
+    buildCommand: ""
+    startCommand: ""
