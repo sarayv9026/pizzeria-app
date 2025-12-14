@@ -3,7 +3,11 @@
 Aplicación full-stack (backend Node/Express + frontend React/Vite) que modela los módulos de Órdenes, Cocina y Bodega para una pizzería. Uso académico; prohibida su comercialización. Derechos reservados.
 
 Autor: 
-- [Carlos Castellanos](https://github.com/castell482)
+- Carlos Mario Castellanos Rivillas
+- Steven Daniel Velasco Velasco
+- Xiomara Barbosa Rodriguez
+- Jhon Erick Santos Gonzalez
+- Saray Quiroz Vélez
 
 
 ## Requisitos
